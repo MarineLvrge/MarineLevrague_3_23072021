@@ -1,17 +1,17 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AOAA,AAAA,OAAO,CAAC;EACJ,UAAU,EAAE,MAAM;CACrB",
     "sources": [
         "main.scss",
+        "utils/_variables.scss",
+        "utils/_mixins.scss",
+        "utils/_keyframes.scss",
         "base/_base.scss",
         "base/_typography.scss",
         "components/_buttons.scss",
         "layouts/_header.scss",
         "layouts/_section.scss",
-        "layouts/_footer.scss",
-        "utils/_variables.scss",
-        "utils/_mixins.scss",
-        "utils/_keyframes.scss"
+        "layouts/_footer.scss"
     ],
     "names": [],
     "file": "main.css"
