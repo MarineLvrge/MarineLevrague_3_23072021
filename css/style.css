@@ -1,0 +1,19 @@
+body {
+  font-family: "roboto", sans-serif;
+  width: 100%;
+}
+
+.menu__name {
+  font-family: "shrikhand";
+}
+
+.header {
+  text-align: center;
+}
+
+.search {
+  width: 100%;
+  align-content: center;
+}
+
+/*# sourceMappingURL=style.css.map */

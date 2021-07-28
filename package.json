@@ -4,12 +4,16 @@
   "description": "Ohmyfood P3",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./css/style.css --style compressed"
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
   },
   "author": "Marine Levrague",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MarineLvrge/ohmyfood-/issues"
   },
-  "homepage": "https://github.com/MarineLvrge/ohmyfood-#readme"
+  "homepage": "https://github.com/MarineLvrge/ohmyfood-#readme",
+  "dependencies": {
+    "@csstools/normalize.css": "^11.0.1",
+    "sass": "^1.36.0"
+  }
 }
