@@ -1,0 +1,16 @@
+.btn {
+    width: auto;
+    height: 3rem;
+    border-radius: $border-radius;
+    border: none;
+    background: linear-gradient(to top left, $color-primary, $color-secondary);
+    cursor: pointer;
+    box-shadow: 0 $shadow-size $shadow-size $shadow-size $shadow-color;
+    color: white;
+    font-size: 1rem;
+    padding: 1rem;
+    &:hover {
+        @include button_hover;
+        box-shadow: 0 $shadow-size $shadow-size $shadow-size $shadow-color-hover;
+    }
+}
