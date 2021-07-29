@@ -5,22 +5,23 @@
     align-items: center;
     text-align: center;
         &__form {
-        background-color: $color-search;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 4rem;
-            &__input {
             background-color: $color-search;
-            text-align: center;
-            font-weight: bold;
-            border: none;
-            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 4rem;
+        }
+            &__input {
+                background-color: $color-search;
+                text-align: center;
+                font-weight: bold;
+                border: none;
+                font-size: 1rem;
+            }
                 &__discover {
                     font-weight: lighter;
                 }
-        }
-    }
+
 }
 
