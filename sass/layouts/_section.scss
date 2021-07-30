@@ -1,3 +1,5 @@
+/***** Search section *****/
+
 .search {
     width: 100%;
     display: flex;
@@ -31,4 +33,57 @@
                     }
 
 }
+
+/***** Functioning section *****/
+
+.functioning {
+    width: 100%;
+    &__title {
+        margin-left: 1rem;
+    }
+    &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        @media only screen and (max-width:800px) {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            margin-left: 1rem;
+        }
+    }
+        &__card {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: $color-background;
+            border-radius: $border-radius;
+            width: 30%;
+            font-weight: bold;
+            height: 4rem;
+            cursor: pointer;
+            box-shadow: 0 0 $shadow-size-card $shadow-size-card $color-background;
+            @media only screen and (max-width: 800px) {
+                margin-bottom: 1rem;
+                width: 100%;
+            }
+            &:hover {
+                @include functioning_card_hover;
+                box-shadow: 0 0 $shadow-size-hover $shadow-size-hover $color-background;
+            }
+        }
+            &__number {
+                display: flex;
+                padding:.1rem .4rem .1rem .4rem;
+                background-color: $color-primary;
+                border-radius: $border-radius;
+                font-size: .9rem;
+                color: white;
+            }
+            &__icon {
+                margin: 1rem;
+                color: #6E6E6E;
+            }
+        }
 

@@ -1,7 +1,13 @@
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     font-family: "roboto", sans-serif;
     width: 100%;
     margin: auto;
+    overflow-x: hidden;
 }
 
 .menu__name {
