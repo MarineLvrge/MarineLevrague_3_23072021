@@ -1,12 +1,26 @@
-html {
-    width: 100%;
-    overflow-x: hidden;
+*, 
+*::before, 
+*::after { 
+    box-sizing: inherit; 
 }
 
-body {
+a {
+    text-decoration: none;
+    &:visited {
+        color:inherit;
+    }
+    &:active {
+        color: inherit;
+    }
+    &:focus {
+        color: inherit;
+    }
+}
+
+body, html {
     font-family: "roboto", sans-serif;
     width: 100%;
-    margin: auto;
+    margin: 0;
     overflow-x: hidden;
 }
 

@@ -38,6 +38,8 @@
 
 .functioning {
     width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
     &__title {
         margin-left: 1rem;
     }
@@ -87,3 +89,37 @@
             }
         }
 
+/***** Restaurants section *****/ 
+
+.restaurants {
+    width: 100%;
+    background-color: $color-background;
+    &__title {
+        margin-left: 1rem;
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        gap: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        @media only screen and (max-width: 800px) {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        }
+    }
+        &__card {
+            border-radius: $border-radius $border-radius;
+            margin-bottom: 1rem;
+            background-color: #FFF;
+            &_img {
+                object-fit: cover;
+                border-radius: $border-radius $border-radius 0 0;
+                width: 100%;
+                height: 15rem;
+                &_text {
+                    
+                }
+            }
+    }
+}
