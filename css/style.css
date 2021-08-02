@@ -84,7 +84,7 @@ body, html {
   color: black;
 }
 .search__discover {
-  font-weight: lighter;
+  font-weight: 300;
 }
 .search__info {
   background-color: #F6F6F6;
@@ -139,11 +139,16 @@ body, html {
 }
 .functioning__number {
   display: flex;
-  padding: 0.1rem 0.4rem 0.1rem 0.4rem;
   background-color: #9356DC;
   border-radius: 1.5rem;
   font-size: 0.9rem;
   color: white;
+  position: relative;
+  right: 0.8rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  align-items: center;
+  justify-content: center;
 }
 .functioning__icon {
   margin: 1rem;
@@ -154,6 +159,8 @@ body, html {
 .restaurants {
   width: 100%;
   background-color: #F6F6F6;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 .restaurants__title {
   margin-left: 1rem;
@@ -171,16 +178,84 @@ body, html {
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   }
 }
+.restaurants__description {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem;
+}
 .restaurants__card {
   border-radius: 1.5rem 1.5rem;
   margin-bottom: 1rem;
   background-color: #FFF;
+  cursor: pointer;
+}
+.restaurants__card:hover {
+  box-shadow: 0 0 0.2rem 0.2rem #BDBDBD;
+  transform: scale(1.02);
+  transition: all 0.2s;
 }
 .restaurants__card_img {
   object-fit: cover;
   border-radius: 1.5rem 1.5rem 0 0;
   width: 100%;
   height: 15rem;
+}
+.restaurants__card_text {
+  line-height: 0.5rem;
+}
+.restaurants__card_subtitle {
+  font-weight: 300;
+}
+.restaurants__card_new {
+  position: relative;
+  background-color: #99E2D0;
+}
+.restaurants__card_heart {
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.restaurants__card_heart:hover {
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+}
+
+.footer {
+  background-color: #353535;
+  width: 100%;
+  height: 10rem;
+}
+.footer__img {
+  -webkit-filter: invert(1);
+  width: 9rem;
+  padding: 1rem;
+}
+.footer__list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+@media only screen and (max-width: 800px) {
+  .footer__list {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-left: 1rem;
+    line-height: 1.5rem;
+  }
+}
+.footer__element {
+  color: white;
+}
+.footer a {
+  color: white;
+}
+.footer a:hover {
+  color: #9356DC;
+}
+.footer__icon {
+  margin-right: 0.8rem;
 }
 
 /*# sourceMappingURL=style.css.map */

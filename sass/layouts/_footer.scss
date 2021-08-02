@@ -1,0 +1,35 @@
+.footer {
+    background-color: $color-footer;
+    width: 100%;
+    height: 10rem;
+    &__img {
+        -webkit-filter: invert(1);
+        width: 9rem;
+        padding: 1rem;
+    }
+        &__list {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            padding: 0;
+            @media only screen and (max-width: 800px) {
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+                margin-left: 1rem;
+                line-height: 1.5rem;
+            }
+        }
+            &__element {
+                color: white;
+            }
+                & a {
+                    color: white;
+                    &:hover {
+                        color: $color-primary;
+                    }
+                }
+                    &__icon {
+                        margin-right: .8rem;
+                    }
+}

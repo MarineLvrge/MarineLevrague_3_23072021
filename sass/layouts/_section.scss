@@ -24,7 +24,7 @@
                 color: black;
             }
                 &__discover {
-                    font-weight: lighter;
+                    font-weight: $font-light;
                 }
                     &__info {
                         background-color: $color-background;
@@ -77,11 +77,16 @@
         }
             &__number {
                 display: flex;
-                padding:.1rem .4rem .1rem .4rem;
                 background-color: $color-primary;
                 border-radius: $border-radius;
                 font-size: .9rem;
                 color: white;
+                position: relative;
+                right: .8rem;
+                width: 1.5rem;
+                height: 1.5rem;
+                align-items: center;
+                justify-content: center;
             }
             &__icon {
                 margin: 1rem;
@@ -94,32 +99,63 @@
 .restaurants {
     width: 100%;
     background-color: $color-background;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     &__title {
         margin-left: 1rem;
     }
-    &__list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-        gap: 1rem;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        @media only screen and (max-width: 800px) {
+        &__list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+            gap: 1rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            @media only screen and (max-width: 800px) {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
         }
-    }
-        &__card {
-            border-radius: $border-radius $border-radius;
-            margin-bottom: 1rem;
-            background-color: #FFF;
-            &_img {
-                object-fit: cover;
-                border-radius: $border-radius $border-radius 0 0;
-                width: 100%;
-                height: 15rem;
-                &_text {
-                    
-                }
+}
+
+&__description {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem;
+}
+    &__card {
+        border-radius: $border-radius $border-radius;
+        margin-bottom: 1rem;
+        background-color: #FFF;
+        cursor: pointer;
+        &:hover {
+            box-shadow: 0 0 $shadow-size-card $shadow-size-card $shadow-color;
+            transform: scale(1.02);
+            transition: all 0.2s;
+        }
+        &_img {
+            object-fit: cover;
+            border-radius: $border-radius $border-radius 0 0;
+            width: 100%;
+            height: 15rem;
+        }
+            &_text {
+                line-height: .5rem;
             }
+                &_subtitle {
+                    font-weight: $font-light;    
+                }
+                    &_new {
+                        position: relative;
+                        background-color: $color-tertiary;
+
+                    }
+                        &_heart {
+                            font-size: 1.4rem;
+                            cursor: pointer;
+                            &:hover {
+                                background: linear-gradient(to top left, $color-primary, $color-secondary);
+                            }
+                        }
     }
 }
