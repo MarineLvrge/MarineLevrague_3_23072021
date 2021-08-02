@@ -6,6 +6,10 @@
         -webkit-filter: invert(1);
         width: 9rem;
         padding: 1rem;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.06);
+        }
     }
         &__list {
             list-style: none;

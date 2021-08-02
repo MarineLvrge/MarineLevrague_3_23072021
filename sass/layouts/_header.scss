@@ -4,6 +4,10 @@
     &__logo {
         margin-top: 1rem;
         margin-bottom: 1rem;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.06);
+        }
         &__img {
             object-fit: cover;
             width: 100%;
