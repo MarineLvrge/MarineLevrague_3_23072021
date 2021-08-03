@@ -1,0 +1,84 @@
+.menu {
+    width: 100%;
+    background-color: $color-background;
+    border-radius: $border-radius $border-radius 0 0;
+    position: relative;
+    margin-top: -8rem;
+    &__name {
+            font-family: "shrikhand", sans-serif;
+            font-weight: $font-title-menu;
+            margin-left: 1rem;
+            text-align: end;
+            font-size: xx-large;
+    }
+        &__heart {
+            font-size: x-large;
+            cursor: pointer;
+        }
+            &__header {
+                display: grid;
+                grid-template-columns: auto auto;
+                align-items: center;
+                gap: 1rem;
+                margin-top: 2rem;
+            }
+                &__dishes {
+                    padding: 1rem 3rem 3rem 1rem;
+                    display: grid;
+                    grid-template-columns: 33% 33% 33%;
+                    gap: 1.5rem;
+                    @media only screen and (max-width: 1200px) {
+                        grid-template-columns: repeat(1, minmax(0, 1fr));
+                        width: 90%;
+                        font-size: .9rem;
+                    }
+                }
+                    &__food {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+                    }
+                        &__choice {
+                            font-weight: $font-light;
+                            font-size: 1rem;
+                            margin-left: .5rem;
+                        }
+                            &__description {
+                                background-color: white;
+                                border-radius: $border-radius;
+                                box-shadow: 0 0 $shadow-size-card $shadow-size-card $color-background;
+                                align-items: center;
+                                display: grid;
+                                grid-template-columns: 75% 10% 10%;
+                                gap: 3rem;
+                                height: 5.5rem;
+                                padding: 0rem 0rem 0rem 1rem;
+                                cursor: pointer;
+                                &:hover {
+                                    transform: scale(1.02);
+                                }
+                                &_text {
+                                    line-height: 1rem;
+                                }
+                                    &_subtitle {
+                                        overflow: hidden;
+                                        font-weight: $font-light;
+                                    }
+                                        &_price {
+                                            font-weight: bold;
+                                        }
+                            }
+                                            &__btn {
+                                                display: flex;
+                                                flex-direction: row;
+                                                justify-content: center;
+                                                padding-bottom: 4rem;
+                                                &_order {
+                                                    width: 10rem;
+                                                    &:hover {
+                                                        @include button_hover;
+                                                        box-shadow: 0 $shadow-size $shadow-size $shadow-size $shadow-color-hover;
+                                                    }
+                                                }
+                                            }
+}
