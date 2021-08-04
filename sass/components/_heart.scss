@@ -1,0 +1,27 @@
+.heart {
+    font-size: 1.4rem;
+    cursor: pointer;
+    &__full {
+        position: relative;
+        color: transparent;
+        font-size: 1.4rem;
+        bottom: .1rem;
+    }
+        &__empty {
+            position: absolute;
+            font-size: 1.4rem;
+        }
+            &:hover &__full {
+                background:linear-gradient(to top left, $color-primary, $color-secondary);
+                background-size: 100% 100%; 
+                background-position: bottom;
+                background-repeat: no-repeat;
+                -webkit-background-clip: text;
+                animation: animHeart 0.5s linear; 
+            }
+            &:hover &__empty {
+                opacity: .1;
+                transition: all .5s;
+                color: $color-primary;
+            }
+}

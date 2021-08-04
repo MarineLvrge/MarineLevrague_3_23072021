@@ -127,6 +127,7 @@
         border-radius: $border-radius $border-radius;
         margin-bottom: 1rem;
         background-color: #FFF;
+        position: relative;
         cursor: pointer;
         &:hover {
             box-shadow: 0 0 $shadow-size-card $shadow-size-card $shadow-color;
@@ -146,16 +147,16 @@
                     font-weight: $font-light;    
                 }
                     &_new {
-                        position: relative;
+                        position: absolute;
                         background-color: $color-tertiary;
-
+                        right: 1rem;
+                        top: 1rem;
+                        color: #278870;
+                        padding: .5rem;
+                        font-size: .9rem;
+                        width: 20%;
+                        text-align: center;
+                        font-weight: 500;
                     }
-                        &_heart {
-                            font-size: 1.4rem;
-                            cursor: pointer;
-                            &:hover {
-                                background: linear-gradient(to top left, $color-primary, $color-secondary);
-                            }
-                        }
     }
 }

@@ -1,3 +1,11 @@
+@keyframes animHeart {
+  0% {
+    background-size: 100% 0%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
 *,
 *::before,
 *::after {
@@ -5,6 +13,7 @@
 }
 
 a {
+  color: black;
   text-decoration: none;
 }
 a:visited {
@@ -38,6 +47,34 @@ body, html {
 .btn:hover {
   background: linear-gradient(to top left, #a16be0, #ff93e1);
   box-shadow: 0 0.1rem 0.1rem 0.1rem #AEAEAE;
+}
+
+.heart {
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.heart__full {
+  position: relative;
+  color: transparent;
+  font-size: 1.4rem;
+  bottom: 0.1rem;
+}
+.heart__empty {
+  position: absolute;
+  font-size: 1.4rem;
+}
+.heart:hover .heart__full {
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  background-size: 100% 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  animation: animHeart 0.5s linear;
+}
+.heart:hover .heart__empty {
+  opacity: 0.1;
+  transition: all 0.5s;
+  color: #9356DC;
 }
 
 /***** Header home *****/
@@ -213,6 +250,7 @@ body, html {
   border-radius: 1.5rem 1.5rem;
   margin-bottom: 1rem;
   background-color: #FFF;
+  position: relative;
   cursor: pointer;
 }
 .restaurants__card:hover {
@@ -233,15 +271,16 @@ body, html {
   font-weight: 300;
 }
 .restaurants__card_new {
-  position: relative;
+  position: absolute;
   background-color: #99E2D0;
-}
-.restaurants__card_heart {
-  font-size: 1.4rem;
-  cursor: pointer;
-}
-.restaurants__card_heart:hover {
-  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  right: 1rem;
+  top: 1rem;
+  color: #278870;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  width: 20%;
+  text-align: center;
+  font-weight: 500;
 }
 
 .menu {
