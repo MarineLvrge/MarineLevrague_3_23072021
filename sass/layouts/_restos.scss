@@ -14,6 +14,7 @@
         &__heart {
             font-size: x-large;
             cursor: pointer;
+            display: flex;
         }
             &__header {
                 display: grid;
@@ -42,26 +43,36 @@
                             font-weight: $font-light;
                             font-size: 1rem;
                             margin-left: .5rem;
+                            position: relative;
+                            &::after {
+                                content: "";
+                                width: 2.5rem;
+                                height: .2rem;
+                                background-color: $color-tertiary;
+                                position: absolute;
+                                bottom: -.5rem;
+                                left: 0;
+                            }
                         }
                             &__description {
                                 background-color: white;
                                 border-radius: $border-radius;
-                                box-shadow: 0 0 $shadow-size-card $shadow-size-card $color-background;
+                                box-shadow: 0 0 $shadow-size-card $shadow-size-card $shadow-color;
                                 align-items: center;
                                 display: grid;
-                                grid-template-columns: 75% 10% 10%;
-                                gap: 3rem;
+                                grid-template-columns: 70% 10% 10%;
+                                gap: 1.5rem;
                                 height: 5.5rem;
                                 padding: 0rem 0rem 0rem 1rem;
                                 cursor: pointer;
                                 &:hover {
                                     transform: scale(1.02);
+                                    box-shadow: 0 0 $shadow-size-card $shadow-size-card $shadow-color-hover;
                                 }
                                 &_text {
                                     line-height: 1rem;
                                 }
                                     &_subtitle {
-                                        overflow: hidden;
                                         font-weight: $font-light;
                                     }
                                         &_price {

@@ -1,9 +1,17 @@
-@keyframes animHeart {
+@keyframes Heart {
   0% {
     background-size: 100% 0%;
   }
   100% {
     background-size: 100% 100%;
+  }
+}
+@keyframes slide-left {
+  0% {
+    transform: translateX(X0);
+  }
+  100% {
+    transform: translateX(-1rem);
   }
 }
 *,
@@ -39,7 +47,7 @@ body, html {
   border: none;
   background: linear-gradient(to top left, #9356DC, #FF79DA);
   cursor: pointer;
-  box-shadow: 0 0.1rem 0.1rem 0.1rem #BDBDBD;
+  box-shadow: 0 0.1rem 0.1rem 0.1rem #E1E1E1;
   color: white;
   font-size: 1rem;
   padding: 1rem;
@@ -69,12 +77,26 @@ body, html {
   background-position: bottom;
   background-repeat: no-repeat;
   -webkit-background-clip: text;
-  animation: animHeart 0.5s linear;
+  animation: Heart 0.5s linear;
 }
 .heart:hover .heart__empty {
   opacity: 0.1;
   transition: all 0.5s;
   color: #9356DC;
+}
+
+.menu__checked {
+  background-color: #99E2D0;
+  cursor: pointer;
+  height: 5.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 1rem 1rem 0;
+}
+.menu__checked_rotation {
+  color: white;
+  font-size: 1.5rem;
 }
 
 /***** Header home *****/
@@ -173,7 +195,7 @@ body, html {
     display: flex;
     flex-direction: column;
     width: 90%;
-    margin-left: 1rem;
+    margin: auto;
   }
 }
 .functioning__card {
@@ -252,9 +274,10 @@ body, html {
   background-color: #FFF;
   position: relative;
   cursor: pointer;
+  box-shadow: 0 0 0.2rem 0.2rem #E1E1E1;
 }
 .restaurants__card:hover {
-  box-shadow: 0 0 0.2rem 0.2rem #BDBDBD;
+  box-shadow: 0 0 0.2rem 0.2rem #AEAEAE;
   transform: scale(1.02);
   transition: all 0.2s;
 }
@@ -300,6 +323,7 @@ body, html {
 .menu__heart {
   font-size: x-large;
   cursor: pointer;
+  display: flex;
 }
 .menu__header {
   display: grid;
@@ -330,27 +354,37 @@ body, html {
   font-weight: 300;
   font-size: 1rem;
   margin-left: 0.5rem;
+  position: relative;
+}
+.menu__choice::after {
+  content: "";
+  width: 2.5rem;
+  height: 0.2rem;
+  background-color: #99E2D0;
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
 }
 .menu__description {
   background-color: white;
   border-radius: 1.5rem;
-  box-shadow: 0 0 0.2rem 0.2rem #F6F6F6;
+  box-shadow: 0 0 0.2rem 0.2rem #E1E1E1;
   align-items: center;
   display: grid;
-  grid-template-columns: 75% 10% 10%;
-  gap: 3rem;
+  grid-template-columns: 70% 10% 10%;
+  gap: 1.5rem;
   height: 5.5rem;
   padding: 0rem 0rem 0rem 1rem;
   cursor: pointer;
 }
 .menu__description:hover {
   transform: scale(1.02);
+  box-shadow: 0 0 0.2rem 0.2rem #AEAEAE;
 }
 .menu__description_text {
   line-height: 1rem;
 }
 .menu__description_subtitle {
-  overflow: hidden;
   font-weight: 300;
 }
 .menu__description_price {

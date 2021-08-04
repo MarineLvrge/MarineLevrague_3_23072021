@@ -1,8 +1,17 @@
-@keyframes animHeart {
+@keyframes Heart {
     0% {
       background-size: 100% 0%;
     }
     100% {
       background-size: 100% 100%;
     }
-  }
+}
+
+@keyframes slide-left {
+    0% {
+      transform: translateX(X0);
+    }
+    100% {
+      transform: translateX(-1rem);
+    }
+}
