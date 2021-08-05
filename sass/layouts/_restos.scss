@@ -4,6 +4,7 @@
     border-radius: $border-radius $border-radius 0 0;
     position: relative;
     margin-top: -8rem;
+    animation: slide-up-menu 1200ms ease-in-out;
     &__name {
             font-family: "shrikhand", sans-serif;
             font-weight: $font-title-menu;
@@ -65,31 +66,44 @@
                                 height: 5.5rem;
                                 padding: 0rem 0rem 0rem 1rem;
                                 cursor: pointer;
+                                animation: slide-menu 1000ms both;
                                 &:hover {
                                     transform: scale(1.02);
                                     box-shadow: 0 0 $shadow-size-card $shadow-size-card $shadow-color-hover;
                                 }
-                                &_text {
-                                    line-height: 1rem;
+                                &_1 {
+                                    animation-delay: 400ms;
                                 }
-                                    &_subtitle {
-                                        font-weight: $font-light;
+                                &_2 {
+                                    animation-delay: 600ms;
+                                }
+                                &_3 {
+                                    animation-delay: 800ms;
+                                }
+                                &_4 {
+                                    animation-delay: 1000ms;
+                                }
+                                    &_text {
+                                        line-height: 1rem;
                                     }
-                                        &_price {
-                                            font-weight: bold;
+                                        &_subtitle {
+                                            font-weight: $font-light;
                                         }
+                                            &_price {
+                                                font-weight: bold;
+                                            }
                             }
-                                            &__btn {
-                                                display: flex;
-                                                flex-direction: row;
-                                                justify-content: center;
-                                                padding-bottom: 4rem;
-                                                &_order {
-                                                    width: 10rem;
-                                                    &:hover {
-                                                        @include button_hover;
-                                                        box-shadow: 0 $shadow-size $shadow-size $shadow-size $shadow-color-hover;
+                                                &__btn {
+                                                    display: flex;
+                                                    flex-direction: row;
+                                                    justify-content: center;
+                                                    padding-bottom: 4rem;
+                                                    &_order {
+                                                        width: 10rem;
+                                                        &:hover {
+                                                            @include button_hover;
+                                                            box-shadow: 0 $shadow-size $shadow-size $shadow-size $shadow-color-hover;
+                                                        }
                                                     }
                                                 }
-                                            }
 }

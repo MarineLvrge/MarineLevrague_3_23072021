@@ -6,6 +6,7 @@
       background-size: 100% 100%;
     }
 }
+/***** Checked animation *****/ 
 
 @keyframes slide-left {
     0% {
@@ -14,4 +15,30 @@
     100% {
       transform: translateX(-1rem);
     }
+}
+
+/***** Card menu animation *****/ 
+
+@keyframes slide-menu {
+  from {
+    transform: translateY(1.25rem);
+    opacity: 0%;
+  }
+
+  to {
+    transform: translateY(0rem);
+    opacity: 100%;
+  }
+}
+
+/***** Menu animation *****/
+
+@keyframes slide-up-menu {
+  from {
+    margin-top: -22rem;
+  }
+
+  to {
+    margin-top: -8rem;
+  }
 }

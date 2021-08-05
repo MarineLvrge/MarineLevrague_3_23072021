@@ -6,12 +6,33 @@
     background-size: 100% 100%;
   }
 }
+/***** Checked animation *****/
 @keyframes slide-left {
   0% {
     transform: translateX(X0);
   }
   100% {
     transform: translateX(-1rem);
+  }
+}
+/***** Card menu animation *****/
+@keyframes slide-menu {
+  from {
+    transform: translateY(1.25rem);
+    opacity: 0%;
+  }
+  to {
+    transform: translateY(0rem);
+    opacity: 100%;
+  }
+}
+/***** Menu animation *****/
+@keyframes slide-up-menu {
+  from {
+    margin-top: -22rem;
+  }
+  to {
+    margin-top: -8rem;
   }
 }
 *,
@@ -312,6 +333,7 @@ body, html {
   border-radius: 1.5rem 1.5rem 0 0;
   position: relative;
   margin-top: -8rem;
+  animation: slide-up-menu 1200ms ease-in-out;
 }
 .menu__name {
   font-family: "shrikhand", sans-serif;
@@ -376,10 +398,23 @@ body, html {
   height: 5.5rem;
   padding: 0rem 0rem 0rem 1rem;
   cursor: pointer;
+  animation: slide-menu 1000ms both;
 }
 .menu__description:hover {
   transform: scale(1.02);
   box-shadow: 0 0 0.2rem 0.2rem #AEAEAE;
+}
+.menu__description_1 {
+  animation-delay: 400ms;
+}
+.menu__description_2 {
+  animation-delay: 600ms;
+}
+.menu__description_3 {
+  animation-delay: 800ms;
+}
+.menu__description_4 {
+  animation-delay: 1000ms;
 }
 .menu__description_text {
   line-height: 1rem;
