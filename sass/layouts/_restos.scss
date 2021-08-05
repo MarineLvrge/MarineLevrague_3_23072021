@@ -32,7 +32,7 @@
                     @media only screen and (max-width: 1200px) {
                         grid-template-columns: repeat(1, minmax(0, 1fr));
                         width: 90%;
-                        font-size: .9rem;
+                        font-size: 1rem;
                     }
                 }
                     &__food {
@@ -86,24 +86,32 @@
                                     &_text {
                                         line-height: 1rem;
                                     }
-                                        &_subtitle {
-                                            font-weight: $font-light;
+                                        &_element {
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                            white-space: nowrap;
                                         }
-                                            &_price {
-                                                font-weight: bold;
+                                            &_subtitle {
+                                                font-weight: $font-light;
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                                white-space: nowrap;
                                             }
+                                                &_price {
+                                                    font-weight: bold;
+                                                }
                             }
-                                                &__btn {
-                                                    display: flex;
-                                                    flex-direction: row;
-                                                    justify-content: center;
-                                                    padding-bottom: 4rem;
-                                                    &_order {
-                                                        width: 10rem;
-                                                        &:hover {
-                                                            @include button_hover;
-                                                            box-shadow: 0 $shadow-size $shadow-size $shadow-size $shadow-color-hover;
+                                                    &__btn {
+                                                        display: flex;
+                                                        flex-direction: row;
+                                                        justify-content: center;
+                                                        padding-bottom: 4rem;
+                                                        &_order {
+                                                            width: 10rem;
+                                                            &:hover {
+                                                                @include button_hover;
+                                                                box-shadow: 0 $shadow-size $shadow-size $shadow-size $shadow-color-hover;
+                                                            }
                                                         }
                                                     }
-                                                }
 }
