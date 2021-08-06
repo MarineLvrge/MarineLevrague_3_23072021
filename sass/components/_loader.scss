@@ -20,10 +20,5 @@
         border-bottom-color: black;
         border-radius: 50%;
         animation: spinner 2s linear infinite;
-        @media only screen and (max-width: 800px) {
-            animation: loading 3s linear;
-        animation: smartphone 2s 2s;
-        animation: spinner 2s linear infinite;
-        }
     }
 }

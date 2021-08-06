@@ -1,14 +1,25 @@
 .menu__checked {
     background-color: $color-tertiary;
+    box-shadow: 0 0 $shadow-size-card $shadow-size-card $shadow-color;
     cursor: pointer;
-    height: 5.5rem;
+    height: 5.7rem;
+    width: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 0 1rem 1rem 0;
+    transition-duration: 0.7s;
     &_rotation {
         color: white;
         font-size: 1.5rem;
     }    
 }
 
+.menu__description:hover i {
+        transform: rotate(1turn);
+        transition: 450ms 200ms ease-out;
+}
+
+.menu__description:hover .menu__checked {
+    margin-right: -5rem;
+}

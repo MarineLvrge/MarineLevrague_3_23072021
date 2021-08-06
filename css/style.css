@@ -7,12 +7,12 @@
   }
 }
 /***** Checked animation *****/
-@keyframes slide-left {
+@keyframes rotation {
   0% {
-    transform: translateX(X0);
+    transform: rotate(0deg);
   }
   100% {
-    transform: translateX(-1rem);
+    transform: rotate(360deg);
   }
 }
 /***** Card menu animation *****/
@@ -56,14 +56,6 @@
   }
   100% {
     transform: scaleZ(0);
-  }
-}
-@keyframes smartphone {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
   }
 }
 *,
@@ -140,16 +132,28 @@ body, html {
 
 .menu__checked {
   background-color: #99E2D0;
+  box-shadow: 0 0 0.2rem 0.2rem #E1E1E1;
   cursor: pointer;
-  height: 5.5rem;
+  height: 5.7rem;
+  width: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 0 1rem 1rem 0;
+  transition-duration: 0.7s;
 }
 .menu__checked_rotation {
   color: white;
   font-size: 1.5rem;
+}
+
+.menu__description:hover i {
+  transform: rotate(1turn);
+  transition: 450ms 200ms ease-out;
+}
+
+.menu__description:hover .menu__checked {
+  margin-right: -5rem;
 }
 
 .loader {
@@ -176,13 +180,6 @@ body, html {
   border-radius: 50%;
   animation: spinner 2s linear infinite;
 }
-@media only screen and (max-width: 800px) {
-  .loader__spin {
-    animation: loading 3s linear;
-    animation: smartphone 2s 2s;
-    animation: spinner 2s linear infinite;
-  }
-}
 
 /***** Header home *****/
 .headerhome {
@@ -201,6 +198,7 @@ body, html {
 /***** Header restaurants *****/
 .header {
   text-align: center;
+  position: relative;
 }
 .header__logo {
   margin-top: 1rem;
@@ -410,6 +408,7 @@ body, html {
   font-size: x-large;
   cursor: pointer;
   display: flex;
+  width: 10%;
 }
 .menu__header {
   display: grid;
