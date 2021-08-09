@@ -191,7 +191,7 @@ body, html {
 @media only screen and (max-width: 480px) {
   .menu__description:hover .menu__checked {
     width: 13%;
-    margin-left: -0.9rem;
+    margin-left: -1.5rem;
   }
 }
 
