@@ -8,12 +8,17 @@
 }
 /***** Checked animation *****/ 
 
-@keyframes rotation {
+@keyframes slide {
   0% {
-    transform: rotate(0deg);
+      transform: scaleX(0);
+      transform-origin: 100% 100%;
+      opacity: 1;
   }
+  
   100% {
-    transform: rotate(360deg);
+      transform: scaleX(1);
+      transform-origin: 100% 100%;
+      opacity: 1;
   }
 }
 

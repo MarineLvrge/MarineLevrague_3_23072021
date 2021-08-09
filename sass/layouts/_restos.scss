@@ -26,14 +26,17 @@
                 margin-top: 2rem;
             }
                 &__dishes {
-                    padding: 1rem 3rem 3rem 1rem;
                     display: grid;
-                    grid-template-columns: 33% 33% 33%;
-                    gap: 1.5rem;
+                    grid-template-columns: 30% 30% 30%;
+                    gap: 2rem;
+                    justify-content: center;
+                    margin-bottom: 3rem;
                     @media only screen and (max-width: 1200px) {
-                        grid-template-columns: repeat(1, minmax(0, 1fr));
+                        grid-template-columns: 100%;
                         width: 90%;
                         font-size: 1rem;
+                        margin: auto;
+                        margin-bottom: 3rem;
                     }
                 }
                     &__food {
@@ -100,6 +103,11 @@
                                             }
                                                 &_price {
                                                     font-weight: bold;
+                                                    display: flex;
+                                                    justify-content: flex-end;
+                                                    position: relative;
+                                                    left: 80%;
+                                                    top: 25%;
                                                 }
                             }
                                                     &__btn {
