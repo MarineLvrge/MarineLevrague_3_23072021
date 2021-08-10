@@ -9,6 +9,7 @@
     align-items: center;
     justify-content: center;
     animation: loading 3s linear;
+    -webkit-animation: loading 3s linear;
     &__spin {
         width: 8rem;
         height: 8rem;
