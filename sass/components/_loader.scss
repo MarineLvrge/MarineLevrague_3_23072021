@@ -1,15 +1,29 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .loader {
     width: 100%;
     height: 100%;
     position: fixed;
     background: rgba(255, 255, 255, 0.8);
     z-index: 999;
-    transform:scaleZ(0);
+    -webkit-transform:scaleZ(0);
+            transform:scaleZ(0);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: loading 3s linear;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-animation: loading 3s linear;
+            animation: loading 3s linear;
     &__spin {
         width: 8rem;
         height: 8rem;
@@ -20,6 +34,7 @@
         border-left-color: $color-tertiary;
         border-bottom-color: black;
         border-radius: 50%;
-        animation: spinner 2s linear infinite;
+        -webkit-animation: spinner 2s linear infinite;
+                animation: spinner 2s linear infinite;
     }
 }
